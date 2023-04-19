@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+body{
+  font-family: 'Noto Sans KR', 'Adamina', serif;
+}
+
+/* btn */
+button, .btn{
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  opacity: .9;
+}
+
+.wrapper{
+  position: relative;
+}
+
+.component{
+  margin-bottom: 200px;
+  padding-bottom: 200px;
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* content */
+.content-header h2{
+  font-size: 60px;
+  font-family: 'Adamina';
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+/* open, close */
+.open{
+  display: block;
+  transition: ease-in .5s;
+}
+.close{
+  display: none;
+  transition: ease-out .5s;
+}
+
+/* header */
+.header-component{
+  position: absolute;
+  display: flex;
+  padding: 40px;
+  width: calc(100% - 80px);
+  z-index: 9;
+}
+.btn-menu{
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+}
+.btn-menu i{
+  color: #FFFFFF;
+  font-size: 32px;
+}
+.btn-menu i:hover{
+  opacity: .6;
+}
+
+/*nav*/
+.menu{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  transition: linear .5s;
+  background-image: url('../images/main_01.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.menu::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,.5);
+}
+.nav{
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.nav .nav-item{
+  position: relative;
+}
+.nav .nav-item:hover .nav-link{
+  opacity: 1;
+}
+.nav .nav-item:hover::after{
+  content: '';
+  width: 100%;
+  height: 10px;
+  background-color: #CB3433;
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  transition: opacity .5s;
+}
+.nav .nav-link{
+  color: #FFFFFF;
+  font-size: 40px;
+  font-family: 'Adamina';
+  line-height: 2;
+  opacity: .8;
+  z-index: 9;
+  position: relative;
+}
+.btn-close{
+  position: absolute;
+  z-index: 9;
+  right: 0;
+  padding: 40px;
+}
+
+/* footer */
+.footer-component{
+  height: 180px;
+  border-top: 1px solid rgba(209,209,210, .5);
+}
+.footer-content, 
+.container{
+  height: 100%;
+}
+.footer{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.footer .icon-group{
+  display: flex;
+}
+.footer .icon-group a{
+  margin: 10px;
+}
+.footer .icon-group img{
+  width: 24px;
+  height: 24px;
+}
+.footer span{
+  margin-left: auto;
+  font-size: 14px;
+}
