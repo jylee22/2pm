@@ -200,6 +200,7 @@
 .video-preview .video-item.swiper-slide-thumb-active::after{
   background-color: transparent;
 }
+
 /* notice */
 .notice{
   display: flex;
@@ -214,9 +215,13 @@
 .notice .notice-item:last-child{
   border-bottom: 1px solid rgba(209,209,210, .5);
 }
+.notice .notice-item span:first-child{
+  margin-right: 20px;
+}
 .notice .notice-item span:last-child{
   margin-left: auto;
   color: rgba(116,126,126, .5);
+  white-space: nowrap;
 }
 .notice-content .btn-more{
   display: block;
